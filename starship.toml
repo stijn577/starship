@@ -1,0 +1,119 @@
+# Get editor completions based on the config schema
+'$schema' = 'https://starship.rs/config-schema.json'
+
+format = '''$os$username$hostname$directory$git_branch$git_state$git_commit$git_status$git_metrics
+$battery$character'''
+
+add_newline = false
+
+line_break.disabled = true
+
+right_format = '$all$cmd_duration$time'
+
+[character]
+success_symbol = '[](bold #a6e3a1) [❯](#89b4fa)'
+error_symbol = '[ Error](bold #f38ba8) [❯](#89b4fa)'
+
+[battery]
+full_symbol = '󱟢 '
+charging_symbol = '󰂄 '
+discharging_symbol = '󱟞 '
+unknown_symbol = '󰁽 '
+empty_symbol = '󰂎 '
+format = '[\[$symbol$percentage\]]($style) [❯](#89b4fa) '
+
+[[battery.display]]
+threshold = 20
+style = 'red bold'
+
+[[battery.display]]
+threshold = 80
+style = '#f9e2af'
+
+[[battery.display]]
+threshold = 100
+style = 'bold #a6e3a1'
+
+[c]
+
+[cmake]
+format = ' [\[$symbol$version\]]($style)'
+style = "#89b4fa"
+symbol = ' '
+
+[cmd_duration]
+min_time = 0
+format = ' [ ]($style)[$duration](bold $style) '
+show_milliseconds = true
+style = '#f9e2af'
+
+[directory]
+truncate_to_repo = false
+format = '[$path]($style)[$read_only]($read_only_style) [❯](#89b4fa) '
+style = '#f5c2e7'
+home_symbol = '~'
+truncation_symbol = '~/../'
+truncation_length = 2
+use_os_path_sep = false
+
+[git_branch]
+format = '[$symbol\($branch(:$remote_branch)\)]($style) '
+style = '#f38ba8'
+symbol = ""
+
+[git_state]
+disabled = false
+style = '#f38ba8'
+[git_commit]
+disabled = false
+style = '#f38ba8'
+[git_status]
+disabled = true
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = '#f38ba8'
+deleted = "✘"
+
+[git_metrics]
+disabled = true
+format = '[\[](#89b4fa)[+$added]($added_style) [-$deleted]($deleted_style)[\]](#89b4fa)'
+# style = '#f38ba8'
+
+[golang]
+format = ' [\[$symbol$version\]]($style)'
+style = "#7fd5ea"
+symbol = " "
+
+[hostname]
+disabled = false
+ssh_only = false
+format = '[$ssh_symbol](bold blue)[$hostname](#b4befe) [❯](#89b4fa) '
+trim_at = '.companyname.com'
+
+[os]
+disabled = false
+format = '[$symbol]($style) [❯](#89b4fa) '
+symbols = { AIX = '➿ ', AlmaLinux = '💠 ', Alpaquita = '🔔 ', Alpine = '🏔️ ', Amazon = '🙂 ', Android = '🤖 ', Arch = '🎗️ ', Artix = '🎗️ ', CentOS = '💠 ', Debian = '🌀 ', DragonFly = '🐉 ', Emscripten = '🔗 ', EndeavourOS = '🚀 ', Fedora = '🎩 ', FreeBSD = '😈 ', Garuda = '🦅 ', Gentoo = '🗜️ ', HardenedBSD = '🛡️ ', Illumos = '🐦 ', Kali = '🐉 ', Linux = '🐧 ', Mabox = '📦 ', Macos = '🍎 ', Manjaro = '🥭 ', Mariner = '🌊 ', MidnightBSD = '🌘 ', Mint = '🌿 ', NetBSD = '🚩 ', NixOS = '❄️ ', OpenBSD = '🐡 ', OpenCloudOS = '☁️ ', OracleLinux = '🦴 ', Pop = '🍭 ', Raspbian = '🍓 ', RedHatEnterprise = '🎩 ', Redhat = '🎩 ', Redox = '🧪 ', RockyLinux = '💠 ', SUSE = '🦎 ', Solus = '⛵ ', Ubuntu = '🎯 ', Ultramarine = '🔷 ', Unknown = '❓ ', Void = '  ', Windows = ' ', openEuler = '🦉 ', openSUSE = '🦎 ' }
+style = '#cdd6f4'
+
+[package]
+format = ' [\[$symbol$version\]]($style)'
+disabled = false
+
+[rust]
+disabled = false
+format = ' [\[$symbol($version)\]]($style)'
+symbol = " "
+style = "#ffa63a"
+version_format = 'v.${major}.${minor}.${patch}'
+
+[time]
+disabled = false
+format = '[at](#cdd6f4) [$time]($style) '
+style = 'bold #89b4fa'
+
+[username]
+disabled = false
+format = '[stijn577]($style)[@]($style)'
+style_root = '#b4befe'
+style_user = '#b4befe'
+show_always = true
