@@ -1,6 +1,6 @@
 "$schema" = "https://starship.rs/config-schema.json"
 format = """
-$os$username$hostname$directory$git_branch$git_state$git_commit$git_status$git_metrics\r
+$os$username$hostname$directory$git_branch$git_state$git_commit$git_status$git_metrics
 $battery$character"""
 add_newline = false
 right_format = "$all$cmd_duration$time"
@@ -9,7 +9,7 @@ palette = "catppuccin_mocha"
 [line_break]
 disabled = true
 
-[palettes.catppuccin_latte]
+[palettes.catppuccin_mocha]
 rosewater = "#dc8a78"
 flamingo = "#dd7878"
 pink = "#ea76cb"
@@ -50,7 +50,7 @@ green = "#a6da95"
 teal = "#8bd5ca"
 sky = "#91d7e3"
 sapphire = "#7dc4e4"
-blue = "#8aadf4"
+blue = "blue"
 lavender = "#b7bdf8"
 text = "#cad3f5"
 subtext1 = "#b8c0e0"
@@ -64,34 +64,6 @@ surface0 = "#363a4f"
 base = "#24273a"
 mantle = "#1e2030"
 crust = "#181926"
-
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
 
 [character]
 success_symbol = "[ Succes](bold green) [❯](blue)"
@@ -263,3 +235,4 @@ format = "[stijn577]($style)[@]($style)"
 style_root = "lavender"
 style_user = "lavender"
 show_always = true
+
