@@ -5,6 +5,8 @@ $battery$character"""
 add_newline = false
 right_format = "$all$cmd_duration$time"
 palette = "catppuccin_mocha"
+command_timeout = 2000
+scan_timeout = 500
 
 [line_break]
 disabled = true
